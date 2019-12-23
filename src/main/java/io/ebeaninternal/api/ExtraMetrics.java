@@ -1,6 +1,5 @@
 package io.ebeaninternal.api;
 
-import io.ebean.meta.MetricType;
 import io.ebean.meta.MetricVisitor;
 import io.ebean.metric.MetricFactory;
 import io.ebean.metric.TimedMetric;
@@ -18,8 +17,8 @@ public class ExtraMetrics {
    */
   public ExtraMetrics() {
     final MetricFactory factory = MetricFactory.get();
-    this.bindCapture = factory.createTimedMetric(MetricType.ORM, "ebean.queryplan.bindcapture");
-    this.planCollect = factory.createTimedMetric(MetricType.ORM, "ebean.queryplan.collect");
+    this.bindCapture = factory.createTimedMetric("ebean.queryplan.bindcapture");
+    this.planCollect = factory.createTimedMetric("ebean.queryplan.collect");
   }
 
   /**
