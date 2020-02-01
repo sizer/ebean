@@ -15,7 +15,7 @@ public interface DataTimeZone {
   /**
    * Return the Calendar to use for Timezone information when reading/writing date.
    * A 'date' only value has normally no timezone information, but some platforms (like MySQL)
-   * reqire this.
+   * require this.
    */
   default Calendar getDateTimeZone() {
     return null;
