@@ -106,7 +106,7 @@ public class UpdateQueryTest extends BaseTestCase {
 
     int rows = server().find(Customer.class)
       .where()
-      .in("id", 1000, 1001, 1002)
+      .idIn(1000, 1001, 1002)
       .asUpdate()
       .setRaw("status = ?", "A")
       .setLabel("asUpdateByIds")
